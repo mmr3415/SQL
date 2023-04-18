@@ -1,0 +1,31 @@
+--Create a pet store database
+
+CREATE TABLE pet_store (id INTEGER PRIMARY KEY, name TEXT, color TEXT, breed TEXT, age INTEGER, price INTEGER);
+
+INSERT INTO pet_store VALUES (1, 'Rocky', 'black', 'dog', 1, 100);
+INSERT INTO pet_store VALUES (2, 'Max', 'white', 'rabbit', 1, 40);
+INSERT INTO pet_store VALUES (3, 'Lucy', 'white', 'cat', 4, 85);
+INSERT INTO pet_store VALUES (4, 'Luna', 'brown', 'dog', 3, 90);
+INSERT INTO pet_store VALUES (5, 'Roxy', 'black', 'rabbit', 1, 45);
+INSERT INTO pet_store VALUES (6, 'Zeus', 'brown', 'dog', 6, 75);
+INSERT INTO pet_store VALUES (7, 'Kobe', 'green', 'lizard', 6, 30);
+INSERT INTO pet_store VALUES (8, 'Buce', 'brown', 'hamster', 2, 20);
+INSERT INTO pet_store VALUES (9, 'Honey', 'gray', 'snake', 4, 50);
+INSERT INTO pet_store VALUES (10, 'Pickles', 'green', 'fish', 1, 2);
+INSERT INTO pet_store VALUES (11, 'Doug', 'orange', 'bird', 4, 60);
+INSERT INTO pet_store VALUES (12, 'Princess', 'white', 'cat', 9, 40);
+INSERT INTO pet_store VALUES (13, 'Penelope', 'black', 'dog', 3, 85);
+INSERT INTO pet_store VALUES (14, 'Sander', 'brown', 'hamster', 3, 40);
+INSERT INTO pet_store VALUES (15, 'Pluto', 'tan', 'dog', 1, 95);
+
+--display the database ordered by price.
+SELECT * FROM pet_store
+ORDER BY price DESC;
+
+--What is the avg price to purchase a dog?
+SELECT AVG(price) FROM pet_store
+WHERE breed = 'dog';
+
+--Which breed is the oldest in age?
+SELECT breed, MAX(age) FROM pet_store;
+
